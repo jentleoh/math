@@ -75,3 +75,28 @@ def test_isPrime():
     assert isPrime(78) is False
     assert isPrime(83) is True
     assert isPrime(97) is True
+
+
+if __name__ == '__main__':
+    """
+    Before executing the code, it will define a few special variables.
+    For example, if the Python interpreter is running that module
+    (the source file) as the main program,
+    it sets the special __name__ variable to have a value "__main__".
+    If this file is being imported from another module,
+    __name__ will be set to the module's name.
+    """
+
+    while True:
+        try:
+            user_input = raw_input(
+                "\n Please enter a natural number between 1 and 99: ")
+            number = int(user_input)
+        except ValueError:
+            print "\n %s is not valid natural number. Please try another."\
+                % (user_input)
+            continue
+        else:
+            break
+
+    isPrime(number)
