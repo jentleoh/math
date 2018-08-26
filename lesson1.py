@@ -85,6 +85,8 @@ if __name__ == '__main__':
     it sets the special __name__ variable to have a value "__main__".
     If this file is being imported from another module,
     __name__ will be set to the module's name.
+    다른 모듈에서 import한 경우에 top level code가 실행되면 안되므로
+    그러한 경우를 방지하기 위해 직접 실행한 모듈만 실행토록 하는 장치
     """
 
     while True:
