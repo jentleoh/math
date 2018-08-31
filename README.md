@@ -4,4 +4,4 @@
 
 0 단원 lesson0 https://github.com/kecheon/math/wiki/Lesson0
 
-1 단원 lesson1 https://github.com/kecheon/math/wiki/Lesson1
+1 단원 lesson1 https://github.com/kecheon/math/wiki/Lesson-1
