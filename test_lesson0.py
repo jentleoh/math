@@ -22,6 +22,11 @@ def test2_add():
 
 
 def test_non_number():
+    """
+    string 'a'와 숫자를 더하면 TypeError가 발생하고, 
+    string 'a'와 string '4'를 더하면 Python은 두 string을 연결한 값을 
+    return한다는 것을 알 수 있습니다.
+    """
     x = 'a'
     y = 4
     with pytest.raises(TypeError):
@@ -29,4 +34,13 @@ def test_non_number():
     
     y = '4'
     assert add(x, y) == 'a4'
+
+
+def test_non_integer():
+    """
+    x와 y에 정수가 아닌 다른 값들을 주면 결과가 어떻게 달라질까요?
+    음수를 주면 어떻게 될까요?
+    과제입니다.
+    """
+    pass
 
