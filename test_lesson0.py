@@ -1,5 +1,6 @@
 # coding: utf8
 
+import pytest
 from lesson0 import add
 
 """
@@ -18,3 +19,14 @@ def test2_add():
     x = 3
     y = 4
     assert add(x, y) == 7
+
+
+def test_non_number():
+    x = 'a'
+    y = 4
+    with pytest.raises(TypeError):
+        add(x, y)
+    
+    y = '4'
+    assert add(x, y) == 'a4'
+
