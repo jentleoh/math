@@ -1,12 +1,11 @@
 # coding: utf8
 
+from lesson0 import add
+
 """
 Let's suppose there exists a function object that returns sum of 2 numbers.
-Then we can make following tests.
+Then we can make following test.
 """
-
-import pytest
-from lesson0 import add
 
 
 def test_add():
@@ -19,13 +18,3 @@ def test2_add():
     x = 3
     y = 4
     assert add(x, y) == 7
-
-
-def test_not_number_value():
-
-    x = 'hello'
-    y = 3
-    with pytest.raises(TypeError):
-        add(x, y)
-
-    assert add(x, y) == None
