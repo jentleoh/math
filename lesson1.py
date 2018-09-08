@@ -5,13 +5,27 @@ def isPrime(number):
     definition: A prime number is a natural number that has exactly 2 
     distinct natural number divisors: 1 and itself
     """
-    i = 2
-    while i <= number/2:
-        if number % i == 0:
-            # number is a composite number
-            return False
-        i = i + 1
-    return True
+    if type(number) is not int:
+        print("\n Only natural number can be a prime number")
+        return False
+    if number <= 1:
+        print("\n %d is not a prime number by definition" % (number))
+        print("\n It should be greater than 1.")
+        return False
+    if number >= 102:
+        print("\n This function can test natural number less than 100")
+        print("\n Please enter another number")
+        return False
+    else:
+        i = 2
+        while i <= number/2:
+            if number % i == 0:
+                # number is a composite number
+                print("\n %d is not a prime number" % (number))
+                return False
+            i = i + 1
+        print("\n %d is a prime number" % (number))
+        return True
 
 
 def isPrimeByEst(number):
