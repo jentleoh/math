@@ -3,15 +3,15 @@
 
 def isPrime(n):
     if type(n) is not int:
-        print "\n Only natural number can be a prime number"
+        print("\n Only natural number can be a prime number")
         return False
     if n <= 1:
-        print "\n %d is not a prime number by definition" % (n)
-        print "\n It should be greater than 1."
+        print("\n %d is not a prime number by definition" % (n))
+        print("\n It should be greater than 1.")
         return False
     if n >= 100:
-        print "\n This function can test natural number less than 100"
-        print "\n Please enter another number"
+        print("\n This function can test natural number less than 100")
+        print("\n Please enter another number")
         return False
     else:
         return sieve(n)
@@ -45,16 +45,17 @@ def sieve(n):
     for p in numbers:
         if p not in marked:
             for i in numbers:
-                if p * i not in marked and p * i in numbers:
+                if (p * i in numbers) and (p * i not in marked):
                     marked.append(p * i)
                     composites.append(p * i)
 
     primes = set(numbers) - set(composites)
+
     if n in primes:
-        print "\n %d is a prime number" % (n)
+        print("\n %d is a prime number" % (n))
         return True
     else:
-        print "\n %d is not a prime number" % (n)
+        print("\n %d is not a prime number" % (n))
         return False
 
 
@@ -92,13 +93,15 @@ if __name__ == '__main__':
     while True:
         try:
             user_input = raw_input(
-                "\n Please enter a natural number between 1 and 99: ")
+                "\n Please enter a natural number between 1 and 99 or enter 'q' to quit: ")
             number = int(user_input)
+            isPrime(number)
+            continue
         except ValueError:
+            if user_input == 'q':
+                break
             print "\n %s is not valid natural number. Please try another."\
                 % (user_input)
             continue
         else:
             break
-
-    isPrime(number)
