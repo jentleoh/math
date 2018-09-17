@@ -7,3 +7,5 @@
   동영상은 https://www.youtube.com/watch?v=AuQsFA3vFHo&t=11s
 
 1 단원 lesson1 자연수와 솟수, 합성수 https://github.com/kecheon/math/wiki/Lesson-1
+
+  동영상은 https://www.youtube.com/watch?v=Bl90RCGSSK0&t=8s
